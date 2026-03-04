@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Languages, ExternalLink } from "lucide-react";
+import { BookOpen, Languages, ExternalLink, ImagePlus } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -16,10 +16,10 @@ const systems = [
     url: "https://siskdp-criador.up.railway.app",
     domain: "siskdp-criador.up.railway.app",
     icon: BookOpen,
-    gradient: "from-violet-500/20 via-purple-500/10 to-transparent",
-    iconColor: "text-violet-400",
-    borderHover: "hover:border-violet-500/40",
-    glowColor: "hover:shadow-violet-500/10",
+    gradient: "from-zinc-500/20 via-zinc-500/10 to-transparent",
+    iconColor: "text-zinc-400",
+    borderHover: "hover:border-zinc-500/40",
+    glowColor: "hover:shadow-zinc-500/10",
   },
   {
     title: "Tradutor de Livros",
@@ -27,32 +27,42 @@ const systems = [
     url: "https://siskdp-tradutor.up.railway.app",
     domain: "siskdp-tradutor.up.railway.app",
     icon: Languages,
-    gradient: "from-emerald-500/20 via-teal-500/10 to-transparent",
-    iconColor: "text-emerald-400",
-    borderHover: "hover:border-emerald-500/40",
-    glowColor: "hover:shadow-emerald-500/10",
+    gradient: "from-neutral-500/20 via-neutral-500/10 to-transparent",
+    iconColor: "text-neutral-400",
+    borderHover: "hover:border-neutral-500/40",
+    glowColor: "hover:shadow-neutral-500/10",
+  },
+  {
+    title: "Criador de Capas",
+    description: "Crie capas incríveis para seus livros de forma automatizada.",
+    url: "https://siskdp-capas.up.railway.app",
+    domain: "siskdp-capas.up.railway.app",
+    icon: ImagePlus,
+    gradient: "from-stone-500/20 via-stone-500/10 to-transparent",
+    iconColor: "text-stone-400",
+    borderHover: "hover:border-stone-500/40",
+    glowColor: "hover:shadow-stone-500/10",
   },
 ];
 
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="pointer-events-none fixed inset-0 bg-gradient-to-br from-violet-950/30 via-background to-emerald-950/20" />
+      <div className="pointer-events-none fixed inset-0 bg-gradient-to-br from-zinc-950/50 via-background to-neutral-950/30" />
 
       {/* Dot pattern overlay */}
       <div className="pointer-events-none fixed inset-0 bg-dots opacity-60" />
 
       {/* Content */}
-      <main className="relative z-10 flex flex-col items-center gap-12 px-6 py-16 w-full max-w-5xl">
+      <main className="relative z-10 flex flex-col items-center gap-12 px-6 py-16 w-full max-w-6xl">
         {/* Header */}
         <header className="flex flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-violet-500 to-emerald-500 flex items-center justify-center">
+            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-zinc-700 to-neutral-800 flex items-center justify-center border border-border">
               <span className="text-lg font-bold text-white">S</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Sis<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-emerald-400">KDP</span>
+              Sis<span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-neutral-400">KDP</span>
             </h1>
           </div>
           <p className="text-muted-foreground text-lg max-w-md">
@@ -61,7 +71,7 @@ export default function Home() {
         </header>
 
         {/* Cards Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {systems.map((system) => {
             const Icon = system.icon;
             return (
@@ -111,8 +121,8 @@ export default function Home() {
                   <CardFooter className="relative">
                     <div className="flex items-center gap-2">
                       <span className="relative flex h-2.5 w-2.5">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-zinc-500 opacity-75" />
+                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-zinc-400" />
                       </span>
                       <span className="text-xs text-muted-foreground">
                         Online
